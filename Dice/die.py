@@ -5,7 +5,7 @@ class Die:
     # A class representing a single dice
 
     def __init__(self, num_sides):
-        # Assume 6 sided dice
+        # Assume sided dice
         self.num_sides = num_sides
 
     def roll(self):
