@@ -7,10 +7,6 @@ num_rolls = int(input("How many rolls do you want analyzed? "))
 
 die = Die(num_sides)
 
-xaxis = []
-for i in range(1, num_sides + 1):
-    xaxis.append(i)
-
 # Make some rolls, and store results in a list
 results = []
 for roll_num in range(num_rolls):
@@ -27,6 +23,12 @@ for value in range(1, die.num_sides + 1):
 hist = pygal.Bar()
 
 hist.title = f"Results of rolling choice of die {num_rolls} times."
+
+# Get the correct x-axis
+xaxis = []
+for i in range(1, num_sides + 1):
+    xaxis.append(i)
+    
 hist.x_labels = xaxis
 hist.x_title = "Result"
 hist.y_title = "Frequency of Result"
